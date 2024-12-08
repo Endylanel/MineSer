@@ -16,7 +16,8 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #2c3e50, #34495e);
+            background: url('https://img1.akspic.ru/crops/1/7/2/8/2/128271/128271-voda-otrazhenie-vodnyj_put-utro-majnkraft-3840x2160.jpg') center/cover no-repeat;
+            background-attachment: fixed;
             color: white;
             overflow-x: hidden;
         }
@@ -26,7 +27,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.6);
             position: fixed;
             width: 100%;
             top: 0;
@@ -47,6 +48,7 @@
             text-decoration: none;
             color: white;
             font-weight: 700;
+            font-size: 18px;
             transition: color 0.3s;
         }
 
@@ -60,34 +62,39 @@
             align-items: center;
             text-align: center;
             height: 100vh;
-            background: url('hero-background.jpg') center/cover no-repeat;
-            background-blur: 10px;
             color: white;
             flex-direction: column;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            padding: 20px;
         }
 
         .hero h1 {
             font-size: 4em;
             margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
         }
 
         .hero p {
             font-size: 1.5em;
             margin-bottom: 40px;
+            max-width: 700px;
         }
 
         .cta-button {
-            background: #ff4081;
+            background: linear-gradient(45deg, #ff4081, #e4405f);
             padding: 15px 30px;
             border-radius: 50px;
             color: white;
             font-weight: 600;
             text-decoration: none;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
         }
 
         .cta-button:hover {
-            background: #e4405f;
+            background: linear-gradient(45deg, #e4405f, #ff4081);
+            transform: scale(1.05);
         }
 
         section {
@@ -96,7 +103,7 @@
         }
 
         .about {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             border-radius: 15px;
             padding: 40px;
             margin-top: 20px;
@@ -112,6 +119,7 @@
             justify-content: center;
             gap: 30px;
             margin-top: 50px;
+            flex-wrap: wrap;
         }
 
         .feature-item {
@@ -120,11 +128,12 @@
             border-radius: 15px;
             max-width: 300px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .feature-item:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
         }
 
         .shop-card-container {
@@ -141,7 +150,7 @@
             width: 280px;
             border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .shop-card img {
@@ -181,7 +190,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.6);
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -190,6 +199,43 @@
         footer p {
             color: white;
             font-size: 1em;
+        }
+
+        /* Анимация появления элементов */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Мобильная адаптивность */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 3em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            .shop-card-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -210,18 +256,18 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero fade-in">
             <h1>Добро пожаловать на Minecraft RPG сервер!</h1>
             <p>Окунитесь в эпическое приключение с уникальными квестами и магией.</p>
             <a href="#join" class="cta-button">Играть сейчас</a>
         </section>
 
-        <section id="about" class="about">
+        <section id="about" class="about fade-in">
             <h2>О сервере</h2>
             <p>Наш сервер Minecraft предлагает увлекательные приключения, квесты и магические возможности, которые изменят ваш взгляд на игру.</p>
         </section>
 
-        <section id="features" class="features">
+        <section id="features" class="features fade-in">
             <div class="feature-item">
                 <h3>Уникальные квесты</h3>
                 <p>Исследуйте мир с захватывающими миссиями и уникальными наградами.</p>
@@ -236,18 +282,18 @@
             </div>
         </section>
 
-        <section id="join" class="join">
+        <section id="join" class="join fade-in">
             <h2>Как присоединиться</h2>
             <p>IP сервера: <strong>play.myrpgserver.com</strong></p>
             <p>Версия: 1.20+</p>
             <a href="https://download.minecraft.net" class="cta-button">Скачать Minecraft</a>
         </section>
 
-        <section id="shop" class="shop-card-container">
+        <section id="shop" class="shop-card-container fade-in">
             <div class="shop-card">
                 <img src="full-access.jpg" alt="Полная проходка">
-                <h3>Прохадка на 1 Год</h3>
-                <p>Доступ к серверу на год.</p>
+                <h3>Полная проходка</h3>
+                <p>Доступ на сервер навсегда.</p>
                 <div class="price">560 рублей</div>
                 <a href="#buy" class="buy-button">Купить</a>
             </div>
