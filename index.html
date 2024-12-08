@@ -1,206 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Добро пожаловать на наш Minecraft RPG сервер! Исследуйте фантастические миры, выполняйте квесты и создавайте свою легенду.">
+    <meta name="description" content="Добро пожаловать на Minecraft RPG сервер! Исследуйте фантастические миры, выполняйте квесты и создавайте свою легенду.">
     <title>Minecraft RPG Server</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #fff;
-            background: linear-gradient(45deg, #1e3c72, #2a5298);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            overflow-x: hidden;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
         header {
             position: sticky;
             top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 50px;
             z-index: 1000;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            transition: background 0.3s ease;
         }
-        header.scrolled {
-            background: rgba(0, 0, 0, 1);
-        }
-        .logo img {
-            height: 60px;
-            transition: transform 0.3s ease;
-        }
-        .logo img:hover {
-            transform: scale(1.1);
-        }
+
         nav ul {
             list-style: none;
             display: flex;
             gap: 30px;
         }
+
         nav ul li {
-            font-size: 18px;
+            font-weight: 600;
         }
+
         nav ul li a {
             text-decoration: none;
-            color: #fff;
-            font-weight: 600;
+            color: white;
+            font-size: 18px;
+            position: relative;
             transition: color 0.3s;
         }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f39c12;
+            transition: width 0.3s, left 0.3s;
+        }
+
         nav ul li a:hover {
             color: #f39c12;
         }
+
+        nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
         .hero {
             position: relative;
-            text-align: center;
-            padding: 150px 20px;
+            height: 100vh;
             background: url('hero-background.jpg') center/cover no-repeat;
-            background-attachment: fixed;
-            color: #fff;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
         .hero h1 {
-            font-size: 3.5em;
+            font-size: 4rem;
             margin-bottom: 20px;
-            animation: fadeInUp 1s ease-out;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
         }
+
         .hero p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-            animation: fadeInUp 1.5s ease-out;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
+
         .cta-button {
             padding: 15px 30px;
-            font-size: 1.2em;
-            color: #fff;
-            background: #f39c12;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
+            background-color: #f39c12;
+            color: white;
             text-decoration: none;
-            transition: background 0.3s, transform 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
         }
+
         .cta-button:hover {
-            background: #e67e22;
-            transform: scale(1.1);
+            background-color: #e67e22;
+            transform: translateY(-3px);
         }
+
         section {
             padding: 60px 20px;
             text-align: center;
-        }
-        .about, .features, .join, .contact, .shop {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 15px;
-            margin: 20px auto;
-            padding: 40px;
-            max-width: 900px;
-            transition: transform 0.3s;
-        }
-        .about:hover, .features:hover, .join:hover, .shop:hover {
-            transform: translateY(-10px);
-        }
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        .feature-list {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .feature-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 30px 0;
             border-radius: 10px;
-            width: 250px;
-            transition: transform 0.3s;
-        }
-        .feature-item:hover {
-            transform: scale(1.05);
-        }
-        .shop .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .shop .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            width: 300px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .shop .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-        .shop .card img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            transition: transform 0.3s;
-        }
-        .shop .card img:hover {
-            transform: scale(1.05);
-        }
-        .shop .card h3 {
-            font-size: 1.7em;
-            margin-bottom: 10px;
-        }
-        .shop .card p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-        .shop .card .price {
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #f39c12;
-        }
-        .shop .card .buy-button {
-            padding: 12px 25px;
-            color: #fff;
-            background: #27ae60;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: background 0.3s, transform 0.3s;
-        }
-        .shop .card .buy-button:hover {
-            background: #2ecc71;
-            transform: scale(1.05);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-        }
-        footer p {
-            margin: 0;
         }
 
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buy-button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #2ecc71;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px 50px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -212,8 +212,9 @@
         <nav>
             <ul>
                 <li><a href="#about">О сервере</a></li>
+                <li><a href="#features">Особенности</a></li>
                 <li><a href="#join">Присоединиться</a></li>
-                <li><a href="#shop">Магазин</a></li>
+                <li><a href="shop.html">Магазин</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
@@ -226,12 +227,12 @@
             <a href="#join" class="cta-button">Играть сейчас</a>
         </section>
 
-        <section id="about" class="about">
+        <section id="about">
             <h2>О сервере</h2>
             <p>Наш сервер предлагает уникальный опыт RPG в Minecraft. Создайте персонажа, развивайте свои навыки и взаимодействуйте с другими игроками в мире, полном опасностей и загадок.</p>
         </section>
 
-        <section id="features" class="features">
+        <section id="features">
             <h2>Особенности</h2>
             <div class="feature-list">
                 <div class="feature-item">
@@ -249,62 +250,14 @@
             </div>
         </section>
 
-        <section id="join" class="join">
+        <section id="join">
             <h2>Как присоединиться</h2>
             <p>IP сервера: <strong>play.myrpgserver.com</strong></p>
             <p>Версия: 1.20+</p>
             <a href="https://download.minecraft.net" class="download-button">Скачать Minecraft</a>
         </section>
 
-        <section id="shop" class="shop">
-            <h2>Магазин</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="full-access.jpg" alt="Полная проходка">
-                    <h3>Полная проходка</h3>
-                    <p>Доступ на сервер навсегда.</p>
-                    <div class="price">560 рублей</div>
-                    <a href="#buy" class="buy-button">Купить</a>
-                </div>
-                <div class="card">
-                    <img src="half-year-access.jpg" alt="Проходка на полгода">
-                    <h3>Проходка на полгода</h3>
-                    <p>Доступ на сервер на 6 месяцев.</p>
-                    <div class="price">300 рублей</div>
-                    <a href="#buy" class="buy-button">Купить</a>
-                </div>
-                <div class="card">
-                    <img src="account-change.jpg" alt="Смена аккаунта">
-                    <h3>Смена аккаунта</h3>
-                    <p>Возможность сменить текущий аккаунт.</p>
-                    <div class="price">90 рублей</div>
-                    <a href="#buy" class="buy-button">Купить</a>
-                </div>
-                <div class="card">
-                    <img src="ban-removal.jpg" alt="Снятие бана">
-                    <h3>Снятие бана</h3>
-                    <p>Снятие блокировки аккаунта.</p>
-                    <div class="price">150 рублей</div>
-                    <a href="#buy" class="buy-button">Купить</a>
-                </div>
-                <div class="card">
-                    <img src="twink.jpg" alt="Твинк">
-                    <h3>Твинк</h3>
-                    <p>Дополнительный аккаунт для игры.</p>
-                    <div class="price">99 рублей</div>
-                    <a href="#buy" class="buy-button">Купить</a>
-                </div>
-                <div class="card">
-                    <img src="support-skins.jpg" alt="Набор скинов поддержки">
-                    <h3>Набор скинов поддержки</h3>
-                    <p>Эксклюзивные скины для вашего персонажа.</p>
-                    <div class="price">190 рублей</div>
-                    <a href="#buy" class="buy-button">Купить</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
+        <section id="contact">
             <h2>Контакты</h2>
             <p>По всем вопросам обращайтесь на нашу почту: <a href="mailto:support@myrpgserver.com">support@myrpgserver.com</a></p>
             <p>Или присоединяйтесь к нашему <a href="https://discord.gg/example">Discord серверу</a>.</p>
