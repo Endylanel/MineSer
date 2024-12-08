@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Добро пожаловать на наш Minecraft RPG сервер! Исследуйте фантастические миры, выполняйте квесты и создавайте свою легенду.">
+    <title>Minecraft RPG Server</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            font-size: 18px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('hero-background.jpg') center/cover no-repeat;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: #fff;
+            background: #f39c12;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #e67e22;
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .about, .features, .join, .contact, .shop {
+            background: rgba(0, 0, 0, 0.7);
+            margin: 20px auto;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 800px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .shop .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .shop .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .shop .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .shop .card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .shop .card p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        .shop .card .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .shop .card .buy-button {
+            padding: 10px 20px;
+            color: #fff;
+            background: #27ae60;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .shop .card .buy-button:hover {
+            background: #2ecc71;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Minecraft RPG Server Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">О сервере</a></li>
+                <li><a href="#features">Особенности</a></li>
+                <li><a href="#join">Присоединиться</a></li>
+                <li><a href="#shop">Магазин</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Добро пожаловать на Minecraft RPG сервер!</h1>
+            <p>Окунитесь в эпическое приключение с уникальными квестами, магией и захватывающими мирами.</p>
+            <a href="#join" class="cta-button">Играть сейчас</a>
+        </section>
+
+        <section id="about" class="about">
+            <h2>О сервере</h2>
+            <p>Наш сервер предлагает уникальный опыт RPG в Minecraft. Создайте персонажа, развивайте свои навыки и взаимодействуйте с другими игроками в мире, полном опасностей и загадок.</p>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Особенности</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Уникальные квесты</h3>
+                    <p>Захватывающие миссии с глубокой историей и вознаграждениями.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Магическая система</h3>
+                    <p>Используйте магию для сражений, исследований и крафта.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Сообщество</h3>
+                    <p>Дружелюбные игроки и активные мероприятия.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="join">
+            <h2>Как присоединиться</h2>
+            <p>IP сервера: <strong>play.myrpgserver.com</strong></p>
+            <p>Версия: 1.20+</p>
+            <a href="https://download.minecraft.net" class="download-button">Скачать Minecraft</a>
+        </section>
+
+        <section id="shop" class="shop">
+            <h2>Магазин</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="full-access.jpg" alt="Полная проходка">
+                    <h3>Полная проходка</h3>
+                    <p>Доступ на сервер навсегда.</p>
+                    <div class="price">560 рублей</div>
+                    <a href="#buy" class="buy-button">Купить</a>
+                </div>
+                <div class="card">
+                    <img src="half-year-access.jpg" alt="Проходка на полгода">
+                    <h3>Проходка на полгода</h3>
+                    <p>Доступ на сервер на 6 месяцев.</p>
+                    <div class="price">300 рублей</div>
+                    <a href="#buy" class="buy-button">Купить</a>
+                </div>
+                <div class="card">
+                    <img src="account-change.jpg" alt="Смена аккаунта">
+                    <h3>Смена аккаунта</h3>
+                    <p>Возможность сменить текущий аккаунт.</p>
+                    <div class="price">90 рублей</div>
+                    <a href="#buy" class="buy-button">Купить</a>
+                </div>
+                <div class="card">
+                    <img src="ban-removal.jpg" alt="Снятие бана">
+                    <h3>Снятие бана</h3>
+                    <p>Снятие блокировки аккаунта.</p>
+                    <div class="price">150 рублей</div>
+                    <a href="#buy" class="buy-button">Купить</a>
+                </div>
+                <div class="card">
+                    <img src="twink.jpg" alt="Твинк">
+                    <h3>Твинк</h3>
+                    <p>Дополнительный аккаунт для игры.</p>
+                    <div class="price">99 рублей</div>
+                    <a href="#buy" class="buy-button">Купить</a>
+                </div>
+                <div class="card">
+                    <img src="support-skins.jpg" alt="Набор скинов поддержки">
+                    <h3>Набор скинов поддержки</h3>
+                    <p>Эксклюзивные скины для вашего персонажа.</p>
+                    <div class="price">190 рублей</div>
+                    <a href="#buy" class="buy-button">Купить</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Контакты</h2>
+            <p>По всем вопросам обращайтесь на нашу почту: <a href="mailto:support@myrpgserver.com">support@myrpgserver.com</a></p>
+            <p>Или присоединяйтесь к нашему <a href="https://discord.gg/example">Discord серверу</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Minecraft RPG Server. Все права защищены.</p>
+    </footer>
+</body>
+</html>
