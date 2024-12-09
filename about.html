@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="О сервере Garden of Stories. Узнайте больше о сюжете, расах и их истории.">
+    <meta name="description" content="О сервере Minecraft Garden of Stories. Узнайте о сюжете, расах и мире нашего сервера.">
     <title>О сервере</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +15,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: url('https://img1.akspic.ru/crops/1/7/2/8/2/128271/128271-voda-otrazhenie-vodnyj_put-utro-majnkraft-3840x2160.jpg') no-repeat center center fixed;
+            background: url('https://media.discordapp.net/attachments/1270032409517363240/1281009930454696056/616140b51012e5ea.png?ex=67581037&is=6756beb7&hm=bb420c35170b9cc0d742d6aad2dbe0bc8450b6cf5685249df6fae5d0f3e02bac&=&format=webp&quality=lossless&width=957&height=528') no-repeat center center fixed;
             background-size: cover;
             color: white;
             text-align: center;
@@ -41,6 +41,7 @@
             margin: 0 15px;
             color: white;
             text-decoration: none;
+            font-size: 1.2em;
             font-weight: bold;
             transition: color 0.3s;
         }
@@ -49,7 +50,7 @@
             color: #ff4081;
         }
 
-        .content {
+        .content-container {
             margin: 50px auto;
             max-width: 960px;
             background: rgba(0, 0, 0, 0.6);
@@ -59,40 +60,20 @@
             text-align: left;
         }
 
-        .content h2 {
-            text-align: center;
-            font-size: 2em;
+        .content-container img {
+            width: 100%;
+            height: auto;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
             margin-bottom: 20px;
         }
 
-        .content p {
-            margin: 10px 0;
+        .additional-info {
+            margin-top: 20px;
+            font-size: 1em;
             line-height: 1.6;
         }
 
-        .content img {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        .back-button {
-            margin-top: 20px;
-            display: inline-block;
-            background: linear-gradient(45deg, #ff4081, #e4405f);
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .back-button:hover {
-            background: linear-gradient(45deg, #e4405f, #ff4081);
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body>
@@ -101,16 +82,17 @@
         <nav>
             <a href="index.html">Главная</a>
             <a href="map.html">Карта</a>
-            <a href="about.html">О сервере</a>
         </nav>
     </header>
     <main>
-        <section class="content">
-            <h2>Сюжет сервера</h2>
+        <section class="content-container">
+            <img src="https://media.discordapp.net/attachments/1270032409517363240/1283303628622532629/2024-09-02_15.54.41.png?ex=67587f63&is=67572de3&hm=16354ef6c2c6ba550a43db138aec3706c9cb9baf0276c259fe4353fd560e93e2&format=webp&quality=lossless&width=836&height=470" alt="Карта Агрона">
+            <h2>Сюжет:</h2>
             <p>Начальная история королевства Агрон и рас!<br>
             Давным давно, посреди океана, на островке, было воздвигнуто королевство, название которому – Агрон. Построили его расы разные – люди, зверолюди, эльфы и дворфы. Жили они в мире и согласии, бед не знали. Королевство процветало, дворфы работали в шахтах, добывая руды драгоценные, эльфы учили магии других жителей Агрона. Зверолюди создавали новую броню, оружие и технологии эдакие.</p>
 
-            <p>Но не могло счастье длиться вечно, настали смутные времена. Прибыл в порт корабль заморский, вышел принц из него с армией химер и потребовал короны Агрона взамен на богатства несметные, но король не бросил королевство свое, великое. Принц рассердился и пригрозил войной всему Агрону, после чего ушел из королевства.</p>
+            <p>Но не могло счастье длиться вечно, настали смутные времена. Прибыл в порт корабль заморский, вышел принц из него с армией химер и потребовал короны Агрона взамен на богатства несметные...</p>
+               <p>Но не могло счастье длиться вечно, настали смутные времена. Прибыл в порт корабль заморский, вышел принц из него с армией химер и потребовал короны Агрона взамен на богатства несметные, но король не бросил королевство свое, великое. Принц рассердился и пригрозил войной всему Агрону, после чего ушел из королевства.</p>
 
             <p>Пробуждение темных сил не оставило без внимания жителей земель Флеина. Слухи о возвращении принца с его армией начали распространяться среди всех. Каждый из народов готовился к возможной угрозе, но вместо единства разгорелись обиды и конфликты.</p>
 
@@ -133,8 +115,15 @@
             <p><strong>Итак, что ты решишь сделать дальше? Выбери свою судьбу: присоединиться к Союзу Света или попытаться найти собственный путь среди хаоса? Или же исследовать более глубокие тайны этой земли? Путь будешь выбирать только ты…</strong></p>
 
             <img src="https://media.discordapp.net/attachments/1270032409517363240/1283303628622532629/2024-09-02_15.54.41.png?ex=67587f63&is=67572de3&hm=16354ef6c2c6ba550a43db138aec3706c9cb9baf0276c259fe4353fd560e93e2&format=webp&quality=lossless&width=836&height=470" alt="Сцена из игры">
-
-            <a href="index.html" class="back-button">Вернуться на главную</a>
+            
+            <h2>Дополнительная информация:</h2>
+            <div class="additional-info">
+                <p>На сервере доступны уникальные игровые режимы и механики. Вы можете выбрать одну из доступных рас: люди, зверолюди, эльфы, дворфы или даже драконорожденные.</p>
+                <p>Каждая раса обладает своими особенностями и умениями, что делает игру более увлекательной и разнообразной. Исследуйте территорию, участвуйте в квестах и взаимодействуйте с другими игроками, чтобы раскрыть все тайны Флеина.</p>
+                <p>Присоединяйтесь к нашему сообществу и напишите свою собственную главу в истории этого удивительного мира!</p>
+                            <a href="index.html" class="back-button">Вернуться на главную</a>
+            </div>
+         
         </section>
     </main>
 </body>
