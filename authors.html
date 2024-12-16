@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Команда проекта Garden of Stories. Познакомьтесь с авторами и их вкладом в проект!">
+    <meta name="description" content="Команда проекта Garden of Stories. Узнайте, кто создает магический мир!">
     <title>Авторы проекта</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +15,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: url('https://img1.akspic.ru/crops/1/7/2/8/2/128271/128271-voda-otrazhenie-vodnyj_put-utro-majnkraft-3840x2160.jpg') no-repeat center center fixed;
+            background: url('https://media.discordapp.net/attachments/1270032409517363240/1281009930454696056/616140b51012e5ea.png?ex=67581037&is=6756beb7&hm=bb420c35170b9cc0d742d6aad2dbe0bc8450b6cf5685249df6fae5d0f3e02bac&=&format=webp&quality=lossless&width=957&height=528') no-repeat center center fixed;
             background-size: cover;
             color: white;
             text-align: center;
@@ -34,58 +34,60 @@
         }
 
         nav {
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         nav a {
-            margin: 0 15px;
             color: white;
             text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
             padding: 10px 20px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(255, 64, 129, 0.8);
             border-radius: 20px;
             transition: background 0.3s;
         }
 
         nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(228, 64, 95, 0.8);
         }
 
-        .authors-container {
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             margin: 50px auto;
             max-width: 1200px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 20px;
             background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .author-card {
-            text-align: center;
-            padding: 20px;
+        .team-member {
+            flex: 1 1 calc(33.333% - 20px);
+            margin: 10px;
             background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
             border-radius: 10px;
+            text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .author-card img {
-            width: 120px;
-            height: 120px;
+        .team-member img {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            border: 3px solid rgba(255, 255, 255, 0.6);
+            border: 3px solid rgba(255, 255, 255, 0.3);
             margin-bottom: 15px;
         }
 
-        .author-card h3 {
+        .team-member h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
         }
 
-        .author-card p {
+        .team-member p {
             font-size: 1em;
             line-height: 1.5;
         }
@@ -101,36 +103,36 @@
         </nav>
     </header>
     <main>
-        <section class="authors-container">
-            <div class="author-card">
-                <img src="https://via.placeholder.com/120" alt="Илья">
+        <section class="team-container">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Галичанин Илья">
                 <h3>Галичанин Илья</h3>
-                <p>Руководитель проекта, создатель и продюсер. Занимается всем и по чуть-чуть.</p>
+                <p>Создатель и продюсер проекта, занимается всем и по чуть-чуть.</p>
             </div>
-            <div class="author-card">
-                <img src="https://via.placeholder.com/120" alt="Григорий">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Воробьев Григорий">
                 <h3>Воробьев Григорий</h3>
-                <p>Админ проекта, занимается тестированием и работой над миссиями.</p>
+                <p>Админ проекта, занимается тестом и работой над миссиями.</p>
             </div>
-            <div class="author-card">
-                <img src="https://via.placeholder.com/120" alt="Мир">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Падаманов Мир">
                 <h3>Падаманов Мир</h3>
-                <p>Админ проекта, отвечает за магию, ману и волшебство.</p>
+                <p>Админ проекта, занимается тестом и работой с магией, маной и прочим волшебством.</p>
             </div>
-            <div class="author-card">
-                <img src="https://via.placeholder.com/120" alt="Нимфа">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Чек Нимфа">
                 <h3>Чек Нимфа</h3>
-                <p>Сценарист, корректирует текст и создает миссии.</p>
+                <p>Корректирует текст сценария, занимается созданием миссий.</p>
             </div>
-            <div class="author-card">
-                <img src="https://via.placeholder.com/120" alt="Алексей">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Попов Алексей">
                 <h3>Попов Алексей</h3>
-                <p>Составляет сценарий и помогает с реализацией на проекте.</p>
+                <p>Составляет сценарий и помогает с реализацией на самом проекте.</p>
             </div>
-            <div class="author-card">
-                <img src="https://via.placeholder.com/120" alt="София">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Патамовна София">
                 <h3>Патамовна София</h3>
-                <p>Рисует мемы, корректирует иконки для сервера.</p>
+                <p>Рисует мемы в группу ВК, корректирует иконки к серверу.</p>
             </div>
         </section>
     </main>
