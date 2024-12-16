@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Команда проекта Garden of Stories. Познакомьтесь с авторами и их вкладом в проект!">
+    <title>Авторы проекта</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('https://media.discordapp.net/attachments/1270032409517363240/1281009930454696056/616140b51012e5ea.png?ex=67581037&is=6756beb7&hm=bb420c35170b9cc0d742d6aad2dbe0bc8450b6cf5685249df6fae5d0f3e02bac&=&format=webp&quality=lossless&width=957&height=528') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .authors-container {
+            margin: 50px auto;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .author-card {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .author-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.6);
+            margin-bottom: 15px;
+        }
+
+        .author-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .author-card p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Авторы проекта</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="map.html">Карта</a>
+            <a href="story.html">О сервере</a>
+        </nav>
+    </header>
+    <main>
+        <section class="authors-container">
+            <div class="author-card">
+                <img src="https://via.placeholder.com/120" alt="Илья">
+                <h3>Галичанин Илья</h3>
+                <p>Руководитель проекта, создатель и продюсер. Занимается всем и по чуть-чуть.</p>
+            </div>
+            <div class="author-card">
+                <img src="https://via.placeholder.com/120" alt="Григорий">
+                <h3>Воробьев Григорий</h3>
+                <p>Админ проекта, занимается тестированием и работой над миссиями.</p>
+            </div>
+            <div class="author-card">
+                <img src="https://via.placeholder.com/120" alt="Мир">
+                <h3>Падаманов Мир</h3>
+                <p>Админ проекта, отвечает за магию, ману и волшебство.</p>
+            </div>
+            <div class="author-card">
+                <img src="https://via.placeholder.com/120" alt="Нимфа">
+                <h3>Чек Нимфа</h3>
+                <p>Сценарист, корректирует текст и создает миссии.</p>
+            </div>
+            <div class="author-card">
+                <img src="https://via.placeholder.com/120" alt="Алексей">
+                <h3>Попов Алексей</h3>
+                <p>Составляет сценарий и помогает с реализацией на проекте.</p>
+            </div>
+            <div class="author-card">
+                <img src="https://via.placeholder.com/120" alt="София">
+                <h3>Патамовна София</h3>
+                <p>Рисует мемы, корректирует иконки для сервера.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
